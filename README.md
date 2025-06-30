@@ -9,13 +9,14 @@ Veronica Moreira Batista Fiqueira - 12302937
 Turma: 3e1
 
 Checklist
+
 - [ ] Cálculo de IMC
-[] Receitas saudáveis.
-[] Receitas Adaptadas.
-[] Histórico clínico de condições de saúde.
-[] Alimentação infantil.
-[] Perfil personalizado.
-[] Calculadora de calorias.
-[] Treinos Personalizados.
-[] Plantio adaptado ao estado que reside.
-[] Momento adequado para a colheita do plantio
+- [ ] Receitas saudáveis.
+- [ ] Receitas Adaptadas.
+- [ ] Histórico clínico de condições de saúde.
+- [ ] Alimentação infantil.
+- [ ] Perfil personalizado.
+- [ ] Calculadora de calorias.
+- [ ] Treinos Personalizados.
+- [ ] Plantio adaptado ao estado que reside.
+- [ ] Momento adequado para a colheita do plantio
