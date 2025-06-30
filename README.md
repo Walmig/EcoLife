@@ -9,8 +9,7 @@ Veronica Moreira Batista Fiqueira - 12302937
 Turma: 3e1
 
 Checklist
-
-- [] Cálculo de IMC
+- [ ] Cálculo de IMC
 [] Receitas saudáveis.
 [] Receitas Adaptadas.
 [] Histórico clínico de condições de saúde.
