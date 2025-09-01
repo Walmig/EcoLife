@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Receitas Nutricionais - Todos os Estilos</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css
+">
+    <link rel="stylesheet" href="{{ asset('style/receitas.css') }}">
+</head>
+
+<body class="bg-gray-50">
+    <div class="container mx-auto px-4 py-8">
+        <header class="text-center mb-12">
+            <h1 class="text-4xl font-bold text-green-700 mb-3">
+                <i class="fas fa-utensils mr-2"></i>Receitas Nutricionais
+            </h1>
+            <p class="text-gray-600 max-w-2xl mx-auto">
+                Descubra receitas deliciosas para todas as necessidades dietéticas:
+
+                sem glúten, sem lactose, veganas, vegetarianas e low carb.
+            </p>
+        </header>
+        <div class="flex overflow-x-auto pb-2 mb-8 border-b border-gray-200">
+            <button class="tab-btn px-4 py-2 mx-1 whitespace-nowrap active-tab" data-category="all">
+
+                <i class="fas fa-th-large mr-1"></i>Todas
+            </button>
+            <button class="tab-btn px-4 py-2 mx-1 whitespace-nowrap" data-category="gluten-free">
+
+                <i class="fas fa-bread-slice mr-1"></i>Sem Glúten
+            </button>
+            <button class="tab-btn px-4 py-2 mx-1 whitespace-nowrap" data-category="lactose-free">
+
+                <i class="fas fa-cheese mr-1"></i>Sem Lactose
+            </button>
+            <button class="tab-btn px-4 py-2 mx-1 whitespace-nowrap" data-category="vegan">
+
+                <i class="fas fa-leaf mr-1"></i>Veganas
+
+            </button>
+            <button class="tab-btn px-4 py-2 mx-1 whitespace-nowrap" data-category="vegetarian">
+
+                <i class="fas fa-carrot mr-1"></i>Vegetarianas
+            </button>
+            <button class="tab-btn px-4 py-2 mx-1 whitespace-nowrap" data-category="low-carb">
+
+                <i class="fas fa-weight mr-1"></i>Low Carb
+            </button>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="recipes-container">
+            <div class="recipe-card bg-white rounded-lg overflow-hidden
+shadow-md" data-categories="vegan gluten-free">
+
+                <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-
+1.2.1&auto=format&fit=crop&w=800&q=80" alt="Bowl Vegano" class="w-full
+
+h-48 object-cover">
+                <div class="p-5">
+                    <div class="flex flex-wrap gap-2 mb-3">
+                        <span class="diet-tag vegan">Vegano</span>
+                        <span class="diet-tag gluten-free">Sem Glúten</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Bowl de Quinoa Colorido</h3>
+                    <p class="text-gray-600 mb-4">Uma refeição completa com
+
+                        quinoa, abacate, tomate seco, pepino e molho de tahine.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-gray-500"><i class="fas fa-clock
+
+mr-1"></i>25 min</span>
+
+                        <button class="text-green-600 hover:text-green-800 text-sm
+
+font-medium">
+
+                            Ver Receita <i class="fas fa-arrow-right ml-1"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="recipe-card bg-white rounded-lg overflow-hidden
+shadow-md" data-categories="low-carb lactose-free">
+
+                <img src="https://images.unsplash.com/photo-1544025162-d76694265947?ixlib=rb-
+1.2.1&auto=format&fit=crop&w=800&q=80" alt="Salmão com Vegetais" class="w-full h-48 object-cover">
+                <div class="p-5">
+                    <div class="flex flex-wrap gap-2 mb-3">
+                        <span class="diet-tag low-carb">Low Carb</span>
+                        <span class="diet-tag lactose-free">Sem Lactose</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Salmão Grelhado com
+
+                        Aspargos</h3>
+
+                    <p class="text-gray-600 mb-4">Salmão temperado com ervas,
+
+                        acompanhado de aspargos grelhados e purê de couve-flor.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-gray-500"><i class="fas fa-clock
+
+mr-1"></i>30 min</span>
+
+                        <button class="text-green-600 hover:text-green-800 text-sm
+
+font-medium">
+
+                            Ver Receita <i class="fas fa-arrow-right ml-1"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="recipe-card bg-white rounded-lg overflow-hidden
+shadow-md" data-categories="vegetarian gluten-free">
+
+                <img src="https://images.unsplash.com/photo-1518779578993-ec3579fee39f?ixlib=
+rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Omelete Vegetariana" class="w-full h-48 object-cover">
+                <div class="p-5">
+                    <div class="flex flex-wrap gap-2 mb-3">
+                        <span class="diet-tag vegetarian">Vegetariana</span>
+                        <span class="diet-tag gluten-free">Sem Glúten</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Omelete de Espinafre e
+
+                        Queijo</h3>
+
+                    <p class="text-gray-600 mb-4">Omelete fofinha com espinafre
+
+                        fresco, queijo feta e tomate cereja.</p>
+
+                    <div class="flex justify-between items-center">
+
+                        <span class="text-sm text-gray-500"><i class="fas fa-clock
+
+mr-1"></i>15 min</span>
+
+                        <button class="text-green-600 hover:text-green-800 text-sm
+
+font-medium">
+
+                            Ver Receita <i class="fas fa-arrow-right ml-1"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="recipe-card bg-white rounded-lg overflow-hidden
+shadow-md" data-categories="vegan gluten-free">
+
+                <img src="https://escolavegana.com/wp-content/uploads/2024/08/Salada-de-Lentilh
+a-com-Abobora-Vegana-e-Fitness-canvax-1-768x768.jpg" alt="Salada
+Vegana" class="w-full h-48 object-cover">
+
+                <div class="p-5">
+                    <div class="flex flex-wrap gap-2 mb-3">
+                        <span class="diet-tag vegan">Vegano</span>
+                        <span class="diet-tag gluten-free">Sem Glúten</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Salada de Lentilha com
+
+                        Abóbora</h3>
+
+                    <p class="text-gray-600 mb-4">Lentilhas cozidas com abóbora
+
+                        assada, rúcula e molho de mostarda e mel.</p>
+
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-gray-500"><i class="fas fa-clock
+
+mr-1"></i>40 min</span>
+
+                        <button class="text-green-600 hover:text-green-800 text-sm
+
+font-medium">
+
+                            Ver Receita <i class="fas fa-arrow-right ml-1"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="recipe-card bg-white rounded-lg overflow-hidden
+shadow-md" data-categories="low-carb lactose-free">
+
+                <img src="https://images.unsplash.com/photo-1547592180-85f173990554?ixlib=rb-
+
+1.2.1&auto=format&fit=crop&w=800&q=80" alt="Frango com Vegetais" class="w-full h-48 object-cover">
+                <div class="p-5">
+                    <div class="flex flex-wrap gap-2 mb-3">
+                        <span class="diet-tag low-carb">Low Carb</span>
+                        <span class="diet-tag lactose-free">Sem Lactose</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Frango ao Curry com
+
+                        Brócolis</h3>
+
+                    <p class="text-gray-600 mb-4">Peito de frango em cubos com
+
+                        molho de curry e brócolis no vapor.</p>
+
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-gray-500"><i class="fas fa-clockmr-1"></i>35 min</span>
+
+                        <button class="text-green-600 hover:text-green-800 text-sm
+
+font-medium">
+
+                            Ver Receita <i class="fas fa-arrow-right ml-1"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="recipe-card bg-white rounded-lg overflow-hidden
+shadow-md" data-categories="vegan vegetarian">
+
+                <img src="https://blog.mundoverde.com.br/wp-content/uploads/2021/01/hamburgue
+r-de-feijao-preto-2.jpeg" alt="Hambúrguer Vegano" class="w-full h-48
+object-cover">
+
+                <div class="p-5">
+                    <div class="flex flex-wrap gap-2 mb-3">
+                        <span class="diet-tag vegan">Vegano</span>
+                        <span class="diet-tag vegetarian">Vegetariana</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Hambúrguer de Feijão
+
+                        Preto</h3>
+
+                    <p class="text-gray-600 mb-4">Hambúrguer feito com feijão
+
+                        preto, aveia e temperos, servido com pão integral.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-gray-500"><i class="fas fa-clock
+
+mr-1"></i>45 min</span>
+
+                        <button class="text-green-600 hover:text-green-800 text-sm
+
+font-medium">
+
+                            Ver Receita <i class="fas fa-arrow-right ml-1"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mt-16 bg-green-50 rounded-lg p-8 text-center">
+            <h2 class="text-2xl font-bold text-green-700 mb-3">Receba Novas
+                Receitas!</h2>
+            <p class="text-gray-600 mb-5 max-w-2xl mx-auto">Assine nossa
+                newsletter e receba semanalmente receitas exclusivas adaptadas para sua
+                dieta.</p>
+            <div class="flex flex-col sm:flex-row max-w-md mx-auto gap-3">
+                <input type="email" placeholder="Seu melhor e-mail" class="flex-grow px-4 py-2 rounded-lg border border-gray-300
+focus:outline-none focus:ring-2 focus:ring-green-500">
+
+                <button class="bg-green-600 hover:bg-green-700 text-white px-6
+
+py-2 rounded-lg font-medium transition duration-300">
+                    Assinar <i class="fas fa-paper-plane ml-1"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    <script src="{{ asset('source/receitas.js') }}"></script>
+</body>
+
+</html>

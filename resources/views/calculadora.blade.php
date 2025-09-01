@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de IMC - NutriVida</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css
+">
+    <link rel="stylesheet" href="{{ asset('style/calculadora.css') }}">
+</head>
+
+<body class="min-h-screen bg-gray-50">
+    <div class="container mx-auto px-4 py-12">
+        <div class="max-w-md mx-auto bg-white rounded-xl shadow-md
+overflow-hidden">
+            <!-- Header -->
+            <div class="gradient-bg text-white py-6 px-6 text-center">
+                <div class="flex justify-center mb-4">
+                    <i class="fas fa-apple-alt food-icon text-4xl"></i>
+                    <i class="fas fa-carrot food-icon text-4xl ml-4 mr-4" style="animation-delay: 0.5s;"></i>
+
+                    <i class="fas fa-fish food-icon text-4xl" style="animation-delay:
+
+1s;"></i>
+                </div>
+                <h1 class="text-2xl font-bold">Calculadora de IMC</h1>
+                <p class="text-sm opacity-90 mt-2">Descubra seu Índice de Massa
+
+                    Corporal</p>
+            </div>
+            <!-- Calculator Form -->
+            <div class="p-6">
+                <form id="bmiForm" class="space-y-4">
+
+                    <div>
+                        <label for="height" class="block text-sm font-medium
+
+text-gray-700 mb-1">Altura (cm)</label>
+                        <div class="relative">
+                            <input type="number" id="height" class="w-full px-4 py-2
+border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500
+focus:border-green-500" placeholder="Ex: 175" min="100" max="250" required>
+
+                            <div class="absolute inset-y-0 right-0 flex items-center pr-3
+
+pointer-events-none">
+
+                                <i class="fas fa-ruler-vertical text-gray-400"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <label for="weight" class="block text-sm font-medium
+
+text-gray-700 mb-1">Peso (kg)</label>
+                        <div class="relative">
+                            <input type="number" id="weight" class="w-full px-4 py-2
+border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500
+focus:border-green-500" placeholder="Ex: 70" min="30" max="300" required>
+                            <div class="absolute inset-y-0 right-0 flex items-center pr-3
+
+pointer-events-none">
+
+                                <i class="fas fa-weight text-gray-400"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pt-2">
+                        <button type="submit" class="w-full gradient-bg text-white py-3
+px-4 rounded-lg font-medium hover:opacity-90 transition duration-300 flex
+items-center justify-center">
+
+                            <i class="fas fa-calculator mr-2"></i> Calcular IMC
+                        </button>
+                    </div>
+                </form>
+                <!-- Result Section -->
+
+                <div id="resultBox" class="result-box mt-6 p-4 rounded-lg
+
+bg-gray-50 border border-gray-200">
+
+                    <h3 class="font-medium text-gray-800 mb-2 flex items-center">
+                        <i class="fas fa-chart-line text-green-500 mr-2"></i> Seu
+
+                        Resultado:
+                    </h3>
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <p class="text-3xl font-bold" id="bmiValue">--</p>
+                            <p class="text-sm text-gray-600" id="bmiCategory">--</p>
+                        </div>
+                        <div id="bmiIcon" class="text-4xl"></div>
+                    </div>
+                    <div id="bmiMessage" class="mt-3 text-sm text-gray-700"></div>
+                    <div class="mt-4 pt-3 border-t border-gray-200">
+                        <h4 class="text-sm font-medium text-gray-700
+
+mb-2">Classificação IMC:</h4>
+                        <div class="space-y-1">
+                            <div class="flex justify-between text-xs">
+                                <span class="text-gray-600">Abaixo do peso</span>
+                                <span class="font-medium">&lt; 18.5</span>
+                            </div>
+                            <div class="flex justify-between text-xs">
+                                <span class="text-gray-600">Peso normal</span>
+                                <span class="font-medium">18.5 - 24.9</span>
+                            </div>
+                            <div class="flex justify-between text-xs">
+                                <span class="text-gray-600">Sobrepeso</span>
+                                <span class="font-medium">25 - 29.9</span>
+                            </div>
+                            <div class="flex justify-between text-xs">
+                                <span class="text-gray-600">Obesidade</span>
+                                <span class="font-medium">≥ 30</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Nutrition Tips -->
+            <div class="bg-yellow-50 px-6 py-4 border-t border-yellow-100">
+                <h3 class="font-medium text-yellow-800 flex items-center">
+                    <i class="fas fa-lightbulb text-yellow-500 mr-2"></i> Dica
+
+                    Nutricional
+                </h3>
+                <p id="nutritionTip" class="text-sm text-yellow-700 mt-1">Preencha
+
+                    seus dados para receber dicas personalizadas!</p>
+            </div>
+        </div>
+    </div>
+    <script src="{{ asset('source/calculadora.js') }}"></script>
+</body>
+
+</html>

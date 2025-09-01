@@ -1,0 +1,9 @@
+/* Estilos personalizados */
+        .scroll-smooth {
+            scroll-behavior: smooth;
+        }
+        .highlight {
+            background-color: rgba(253, 230, 138, 0.5);
+            padding: 0.2rem 0.4rem;
+            border-radius: 0.25rem;
+        }

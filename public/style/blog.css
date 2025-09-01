@@ -1,0 +1,54 @@
+       .hero-pattern {
+            background-image: radial-gradient(circle at 10% 20%, rgba(132, 250, 176, 0.1) 0%, rgba(143, 211, 244, 0.1) 90%);
+        }
+        .article-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        .category-pill {
+            transition: all 0.3s ease;
+        }
+        .category-pill:hover {
+            transform: scale(1.05);
+        }
+        .dietary-tag {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+        .gluten-free {
+            background-color: #3B82F6;
+            color: white;
+        }
+        .lactose-free {
+            background-color: #10B981;
+            color: white;
+        }
+        .low-impact {
+            background-color: #F59E0B;
+            color: white;
+        }
+        .weight-loss {
+            background-color: #8B5CF6;
+            color: white;
+        }
+        .animated-underline {
+            position: relative;
+        }
+        .animated-underline:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #3b82f6;
+            transition: width 0.3s ease;
+        }
+        .animated-underline:hover:after {
+            width: 100%;
+        }

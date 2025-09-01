@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoLife - Perfil do Usuário</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="{{ asset('style/perfil.css') }}">
+    
+</head>
+<body class="bg-gray-50 font-sans">
+    <div class="min-h-screen flex flex-col">
+        <!-- Header -->
+        <header class="bg-white shadow-sm sticky top-0 z-50">
+<div class="container mx-auto px-4 py-3 flex items-center justify-between">
+<a href="#" class="font-['Pacifico'] text-3xl text-primary">EcoLife</a>
+<nav class="hidden md:flex space-x-8">
+<a href="index.html" class="text-gray-700 hover:text-primary font-medium">Início</a>
+<a href="receitas.html" class="text-gray-700 hover:text-primary font-medium">Receitas</a>
+<a href="caculadora.html" class="text-gray-700 hover:text-primary font-medium">Calculadora de IMC</a>
+<a href="#" class="text-gray-700 hover:text-primary font-medium">Plantio</a>
+<a href="#" class="text-gray-700 hover:text-primary font-medium">Infantil</a>
+<a href="blog.html" class="text-gray-700 hover:text-primary font-medium">Blog</a>
+<a href="perfil.html" class="text-gray-700 hover:text-primary font-medium">Perfil</a>
+</nav>
+<div class="flex items-center space-x-4">
+<a href="login.html"><button class="bg-primary text-white px-5 py-2 !rounded-button whitespace-nowrap hover:bg-opacity-90 transition-colors"  >Entrar</button></a>
+<div class="w-10 h-10 flex items-center justify-center md:hidden">
+<i class="ri-menu-line ri-lg"></i>
+</div>
+</div>
+</div>
+</header>
+
+        <!-- Main Content -->
+        <main class="flex-grow p-4 md:p-8">
+            <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <!-- Left Column - Profile Info -->
+                <div class="lg:col-span-1">
+                    <div class="bg-white rounded-xl shadow-sm p-6">
+                        <div class="flex flex-col items-center">
+                            <div class="relative mb-4">
+                                <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Profile" class="w-32 h-32 rounded-full object-cover border-4 border-green-100">
+                                <button class="absolute bottom-0 right-0 bg-green-500 text-white p-2 rounded-full hover:bg-green-600 transition">
+                                    <i class="fas fa-camera"></i>
+                                </button>
+                            </div>
+                            <h2 class="text-2xl font-bold text-gray-800">Ana Silva</h2>
+                            <p class="text-gray-600 mb-4">Membro desde: Jun 2022</p>
+                            
+                            <div class="w-full mb-6">
+                                <div class="flex justify-between items-center mb-1">
+                                    <span class="text-sm font-medium text-gray-700">Progresso do mês</span>
+                                    <span class="text-sm font-bold text-green-600">75%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                    <div class="bg-green-500 h-2.5 rounded-full" style="width: 75%"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="w-full space-y-4">
+                                <div class="flex items-center p-3 bg-green-50 rounded-lg">
+                                    <div class="p-2 bg-green-100 rounded-full mr-3">
+                                        <i class="fas fa-heart text-green-600"></i>
+                                    </div>
+                                    <div>
+                                        <p class="text-sm text-gray-500">Condição de saúde</p>
+                                        <p class="font-medium text-gray-800">Intolerância à lactose</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-center p-3 bg-green-50 rounded-lg">
+                                    <div class="p-2 bg-green-100 rounded-full mr-3">
+                                        <i class="fas fa-weight text-green-600"></i>
+                                    </div>
+                                    <div>
+                                        <p class="text-sm text-gray-500">Meta atual</p>
+                                        <p class="font-medium text-gray-800">Perda de peso</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-center p-3 bg-green-50 rounded-lg">
+                                    <div class="p-2 bg-green-100 rounded-full mr-3">
+                                        <i class="fas fa-trophy text-green-600"></i>
+                                    </div>
+                                    <div>
+                                        <p class="text-sm text-gray-500">Conquistas</p>
+                                        <p class="font-medium text-gray-800">15/25</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl shadow-sm p-6 mt-6">
+                        <h3 class="text-lg font-semibold text-gray-800 mb-4">Suporte Especializado</h3>
+                        <div class="space-y-3">
+                            <a href="#" class="flex items-center p-3 hover:bg-green-50 rounded-lg transition">
+                                <div class="p-2 bg-green-100 rounded-full mr-3">
+                                    <i class="fas fa-user-md text-green-600"></i>
+                                </div>
+                                <div>
+                                    <p class="font-medium text-gray-800">Nutricionista</p>
+                                    <p class="text-sm text-gray-500">Marque uma consulta</p>
+                                </div>
+                            </a>
+                            
+                            <a href="#" class="flex items-center p-3 hover:bg-green-50 rounded-lg transition">
+                                <div class="p-2 bg-green-100 rounded-full mr-3">
+                                    <i class="fas fa-dumbbell text-green-600"></i>
+                                </div>
+                                <div>
+                                    <p class="font-medium text-gray-800">Personal Trainer</p>
+                                    <p class="text-sm text-gray-500">Exercícios adaptados</p>
+                                </div>
+                            </a>
+                            
+                            <a href="#" class="flex items-center p-3 hover:bg-green-50 rounded-lg transition">
+                                <div class="p-2 bg-green-100 rounded-full mr-3">
+                                    <i class="fas fa-comments text-green-600"></i>
+                                </div>
+                                <div>
+                                    <p class="font-medium text-gray-800">Grupo de Apoio</p>
+                                    <p class="text-sm text-gray-500">Conecte-se com outros</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Right Column - Main Content -->
+                <div class="lg:col-span-2 space-y-6">
+                    <!-- Health Stats -->
+                    <div class="bg-white rounded-xl shadow-sm p-6">
+                        <div class="flex justify-between items-center mb-6">
+                            <h3 class="text-xl font-semibold text-gray-800">Seu Progresso de Saúde</h3>
+                            <button class="text-green-600 hover:text-green-700 transition">
+                                <i class="fas fa-ellipsis-h"></i>
+                            </button>
+                        </div>
+                        
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                            <div class="bg-green-50 p-4 rounded-lg text-center">
+                                <div class="mx-auto w-16 h-16 mb-2 relative">
+                                    <svg class="w-full h-full" viewBox="0 0 36 36">
+                                        <path d="M18 2.0845
+                                          a 15.9155 15.9155 0 0 1 0 31.831
+                                          a 15.9155 15.9155 0 0 1 0 -31.831"
+                                          fill="none"
+                                          stroke="#e5e7eb"
+                                          stroke-width="3"
+                                          stroke-dasharray="100, 100"
+                                        />
+                                        <path d="M18 2.0845
+                                          a 15.9155 15.9155 0 0 1 0 31.831
+                                          a 15.9155 15.9155 0 0 1 0 -31.831"
+                                          fill="none"
+                                          stroke="#4ade80"
+                                          stroke-width="3"
+                                          stroke-dasharray="65, 100"
+                                          class="progress-ring__circle"
+                                        />
+                                    </svg>
+                                    <span class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-lg font-bold text-green-600">65%</span>
+                                </div>
+                                <p class="text-sm text-gray-600">Meta de peso</p>
+                            </div>
+                            
+                            <div class="bg-green-50 p-4 rounded-lg text-center">
+                                <div class="mx-auto w-16 h-16 mb-2 relative">
+                                    <svg class="w-full h-full" viewBox="0 0 36 36">
+                                        <path d="M18 2.0845
+                                          a 15.9155 15.9155 0 0 1 0 31.831
+                                          a 15.9155 15.9155 0 0 1 0 -31.831"
+                                          fill="none"
+                                          stroke="#e5e7eb"
+                                          stroke-width="3"
+                                          stroke-dasharray="100, 100"
+                                        />
+                                        <path d="M18 2.0845
+                                          a 15.9155 15.9155 0 0 1 0 31.831
+                                          a 15.9155 15.9155 0 0 1 0 -31.831"
+                                          fill="none"
+                                          stroke="#4ade80"
+                                          stroke-width="3"
+                                          stroke-dasharray="80, 100"
+                                          class="progress-ring__circle"
+                                        />
+                                    </svg>
+                                    <span class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-lg font-bold text-green-600">80%</span>
+                                </div>
+                                <p class="text-sm text-gray-600">Alimentação</p>
+                            </div>
+                            
+                            <div class="bg-green-50 p-4 rounded-lg text-center">
+                                <div class="mx-auto w-16 h-16 mb-2 relative">
+                                    <svg class="w-full h-full" viewBox="0 0 36 36">
+                                        <path d="M18 2.0845
+                                          a 15.9155 15.9155 0 0 1 0 31.831
+                                          a 15.9155 15.9155 0 0 1 0 -31.831"
+                                          fill="none"
+                                          stroke="#e5e7eb"
+                                          stroke-width="3"
+                                          stroke-dasharray="100, 100"
+                                        />
+                                        <path d="M18 2.0845
+                                          a 15.9155 15.9155 0 0 1 0 31.831
+                                          a 15.9155 15.9155 0 0 1 0 -31.831"
+                                          fill="none"
+                                          stroke="#4ade80"
+                                          stroke-width="3"
+                                          stroke-dasharray="45, 100"
+                                          class="progress-ring__circle"
+                                        />
+                                    </svg>
+                                    <span class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-lg font-bold text-green-600">45%</span>
+                                </div>
+                                <p class="text-sm text-gray-600">Exercícios</p>
+                            </div>
+                            
+                            <div class="bg-green-50 p-4 rounded-lg text-center">
+                                <div class="mx-auto w-16 h-16 mb-2 relative">
+                                    <svg class="w-full h-full" viewBox="0 0 36 36">
+                                        <path d="M18 2.0845
+                                          a 15.9155 15.9155 0 0 1 0 31.831
+                                          a 15.9155 15.9155 0 0 1 0 -31.831"
+                                          fill="none"
+                                          stroke="#e5e7eb"
+                                          stroke-width="3"
+                                          stroke-dasharray="100, 100"
+                                        />
+                                        <path d="M18 2.0845
+                                          a 15.9155 15.9155 0 0 1 0 31.831
+                                          a 15.9155 15.9155 0 0 1 0 -31.831"
+                                          fill="none"
+                                          stroke="#4ade80"
+                                          stroke-width="3"
+                                          stroke-dasharray="90, 100"
+                                          class="progress-ring__circle"
+                                        />
+                                    </svg>
+                                    <span class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-lg font-bold text-green-600">90%</span>
+                                </div>
+                                <p class="text-sm text-gray-600">Bem-estar</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Recent Activity -->
+                    <div class="bg-white rounded-xl shadow-sm p-6">
+                        <div class="flex justify-between items-center mb-6">
+                            <h3 class="text-xl font-semibold text-gray-800">Atividade Recente</h3>
+                            <button class="text-green-600 hover:text-green-700 transition">
+                                Ver tudo
+                            </button>
+                        </div>
+                        
+                        <div class="space-y-4 max-h-96 overflow-y-auto custom-scrollbar pr-2">
+                            <div class="flex items-start p-3 hover:bg-green-50 rounded-lg transition">
+                                <div class="p-2 bg-green-100 rounded-full mr-3 mt-1">
+                                    <i class="fas fa-utensils text-green-600"></i>
+                                </div>
+                                <div class="flex-grow">
+                                    <p class="font-medium text-gray-800">Refeição registrada</p>
+                                    <p class="text-sm text-gray-600">Café da manhã sem lactose - 350kcal</p>
+                                    <p class="text-xs text-gray-500 mt-1">Hoje, 08:30</p>
+                                </div>
+                                <div class="text-green-500">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start p-3 hover:bg-green-50 rounded-lg transition">
+                                <div class="p-2 bg-green-100 rounded-full mr-3 mt-1">
+                                    <i class="fas fa-dumbbell text-green-600"></i>
+                                </div>
+                                <div class="flex-grow">
+                                    <p class="font-medium text-gray-800">Exercício concluído</p>
+                                    <p class="text-sm text-gray-600">Yoga adaptado para hérnia de disco - 25min</p>
+                                    <p class="text-xs text-gray-500 mt-1">Ontem, 18:15</p>
+                                </div>
+                                <div class="text-green-500">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start p-3 hover:bg-green-50 rounded-lg transition">
+                                <div class="p-2 bg-green-100 rounded-full mr-3 mt-1">
+                                    <i class="fas fa-weight text-green-600"></i>
+                                </div>
+                                <div class="flex-grow">
+                                    <p class="font-medium text-gray-800">Peso registrado</p>
+                                    <p class="text-sm text-gray-600">-1.2kg desde a última semana</p>
+                                    <p class="text-xs text-gray-500 mt-1">Ontem, 09:00</p>
+                                </div>
+                                <div class="text-green-500">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start p-3 hover:bg-green-50 rounded-lg transition">
+                                <div class="p-2 bg-green-100 rounded-full mr-3 mt-1">
+                                    <i class="fas fa-book text-green-600"></i>
+                                </div>
+                                <div class="flex-grow">
+                                    <p class="font-medium text-gray-800">Artigo lido</p>
+                                    <p class="text-sm text-gray-600">"Receitas sem glúten para iniciantes"</p>
+                                    <p class="text-xs text-gray-500 mt-1">2 dias atrás</p>
+                                </div>
+                                <div class="text-green-500">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start p-3 hover:bg-green-50 rounded-lg transition">
+                                <div class="p-2 bg-green-100 rounded-full mr-3 mt-1">
+                                    <i class="fas fa-users text-green-600"></i>
+                                </div>
+                                <div class="flex-grow">
+                                    <p class="font-medium text-gray-800">Novo grupo</p>
+                                    <p class="text-sm text-gray-600">Você se juntou ao "Desafio 30 dias sem lactose"</p>
+                                    <p class="text-xs text-gray-500 mt-1">3 dias atrás</p>
+                                </div>
+                                <div class="text-green-500">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Recommended Content -->
+                    <div class="bg-white rounded-xl shadow-sm p-6">
+                        <div class="flex justify-between items-center mb-6">
+                            <h3 class="text-xl font-semibold text-gray-800">Recomendado para Você</h3>
+                            <button class="text-green-600 hover:text-green-700 transition">
+                                Ver tudo
+                            </button>
+                        </div>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="border border-gray-200 rounded-lg overflow-hidden hover:shadow-md transition">
+                                <div class="h-32 bg-green-100 flex items-center justify-center">
+                                    <i class="fas fa-utensils text-4xl text-green-600"></i>
+                                </div>
+                                <div class="p-4">
+                                    <h4 class="font-medium text-gray-800 mb-1">5 Receitas sem Lactose</h4>
+                                    <p class="text-sm text-gray-600 mb-2">Deliciosas opções para seu café da manhã</p>
+                                    <div class="flex items-center text-xs text-gray-500">
+                                        <i class="fas fa-clock mr-1"></i>
+                                        <span>15 min de leitura</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="border border-gray-200 rounded-lg overflow-hidden hover:shadow-md transition">
+                                <div class="h-32 bg-green-100 flex items-center justify-center">
+                                    <i class="fas fa-spa text-4xl text-green-600"></i>
+                                </div>
+                                <div class="p-4">
+                                    <h4 class="font-medium text-gray-800 mb-1">Exercícios para Artrose</h4>
+                                    <p class="text-sm text-gray-600 mb-2">Movimentos suaves para aliviar a dor</p>
+                                    <div class="flex items-center text-xs text-gray-500">
+                                        <i class="fas fa-video mr-1"></i>
+                                        <span>Vídeo de 12 min</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+        <!-- Footer -->
+        <footer class="bg-white py-6 px-4 border-t">
+            <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center">
+                <div class="flex items-center space-x-2 mb-4 md:mb-0">
+                    <div class="w-8 h-8 rounded-full bg-green-500 flex items-center justify-center">
+                        <i class="fas fa-leaf text-white"></i>
+                    </div>
+                    <span class="font-bold text-green-600">EcoLife</span>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="termos.html" class="text-gray-600 hover:text-green-600 transition">Termos</a>
+                    <a href="#" class="text-gray-600 hover:text-green-600 transition">Privacidade</a>
+                    <a href="#" class="text-gray-600 hover:text-green-600 transition">Contato</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+  <script src="{{ asset('source/perfil.js') }}"></script>
+</body>
+</html>
