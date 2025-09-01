@@ -13,7 +13,7 @@ Checklist
 - [ ] Cálculo de IMC
 - [ ] Receitas saudáveis.
 - [ ] Receitas Adaptadas.
-- [ ] Histórico clínico de condições de saúde.
+- [ ] Cadastrar Usuário.
 - [ ] Alimentação infantil.
 - [ ] Perfil personalizado.
 - [ ] Calculadora de calorias.
