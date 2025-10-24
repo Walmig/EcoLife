@@ -1,11 +1,11 @@
 # EcoLife
 Integrantes:
-Walmig Miranda de Oliveira Fonseca Filho - 12303399
-Leon Pierro Vieira Carvalho - 12302996
-Sofia Marcela Maia Oliveira - 12300969
-Felipe Ma e Silva - 12301132
-Veronica Moreira Batista Figueira - 12302937
-
+- Walmig Miranda de Oliveira Fonseca Filho - 12303399
+- Leon Pierro Vieira Carvalho - 12302996
+- Sofia Marcela Maia Oliveira - 12300969
+- Felipe Ma e Silva - 12301132
+- Veronica Moreira Batista Figueira - 12302937
+ 
 Turma: 3e1
 
 Checklist
