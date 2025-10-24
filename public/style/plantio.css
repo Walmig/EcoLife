@@ -1,0 +1,95 @@
+:root {
+    --primary: #4CAF50;
+    --secondary: #8BC34A;
+    --accent: #FF9800;
+    --light: #F1F8E9;
+    --dark: #2E7D32;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.hero {
+    background: linear-gradient(135deg, rgba(76, 175, 80, 0.9), rgba(139, 195, 74, 0.9)),
+        url('https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+    background-size: cover;
+    background-position: center;
+}
+
+.plant-card {
+    transition: all 0.3s ease;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.plant-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.soil-type {
+    border-left: 4px solid var(--accent);
+}
+
+.season-indicator {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 8px;
+}
+
+.spring {
+    background-color: #4CAF50;
+}
+
+.summer {
+    background-color: #FF9800;
+}
+
+.autumn {
+    background-color: #795548;
+}
+
+.winter {
+    background-color: #03A9F4;
+}
+
+.region-selector {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.leaf-decoration {
+    position: absolute;
+    opacity: 0.1;
+    z-index: 0;
+}
+
+.content-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.pulse-animation {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}

@@ -1,0 +1,26 @@
+tailwind.config={
+    theme:{
+    extend:{
+    colors:{
+    primary:'#4CAF50',
+    secondary:'#8BC34A',
+    hero:'#FF6B6B',
+    power:'#FFD93D',
+    shield:'#6BCB77',
+    speed:'#4D96FF'
+    },
+    borderRadius:{
+    'none':'0px',
+    'sm':'4px',
+    DEFAULT:'8px',
+    'md':'12px',
+    'lg':'16px',
+    'xl':'20px',
+    '2xl':'24px',
+    '3xl':'32px',
+    'full':'9999px',
+    'button':'8px'
+    }
+    }
+    }
+    }

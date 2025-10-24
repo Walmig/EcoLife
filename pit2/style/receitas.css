@@ -1,0 +1,38 @@
+.recipe-card {
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.recipe-card:hover {
+transform: translateY(-5px);
+box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+
+}
+.diet-tag {
+font-size: 0.75rem;
+padding: 0.25rem 0.5rem;
+border-radius: 9999px;
+}
+.gluten-free {
+background-color: #93C5FD;
+color: #1E3A8A;
+}
+.lactose-free {
+background-color: #FCA5A5;
+color: #7F1D1D;
+}
+.vegan {
+background-color: #86EFAC;
+color: #166534;
+}
+.vegetarian {
+background-color: #A5B4FC;
+color: #3730A3;
+}
+.low-carb {
+background-color: #FCD34D;
+color: #854D0E;
+}
+.active-tab {
+border-bottom: 3px solid #10B981;
+font-weight: 600;
+color: #10B981;
+}

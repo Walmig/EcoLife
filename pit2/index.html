@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EcoLife - Vida Saudável para Todos</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<!--Css-->
+<script>
+tailwind.config={
+theme:{
+extend:{
+colors:{
+primary:'#4CAF50',
+secondary:'#8BC34A'
+},
+borderRadius:{
+'none':'0px',
+'sm':'4px',
+DEFAULT:'8px',
+'md':'12px',
+'lg':'16px',
+'xl':'20px',
+'2xl':'24px',
+'3xl':'32px',
+'full':'9999px',
+'button':'8px'
+}
+}
+}
+}
+</script>
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+body {
+font-family: 'Inter', sans-serif;
+color: #333;
+}
+.hero-section {
+background-image: linear-gradient(to right, rgba(255, 255, 255, 0.9) 40%, rgba(255, 255, 255, 0.1) 100%), url('https://public.readdy.ai/ai/img_res/5d3cd48468a184500bddecd2310d28c5.jpg');
+background-size: cover;
+background-position: center;
+}
+.custom-shadow {
+box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+-webkit-appearance: none;
+margin: 0;
+}
+.category-card:hover {
+transform: translateY(-5px);
+transition: transform 0.3s ease;
+}
+.custom-checkbox {
+appearance: none;
+-webkit-appearance: none;
+width: 20px;
+height: 20px;
+border: 2px solid #ddd;
+border-radius: 4px;
+outline: none;
+cursor: pointer;
+position: relative;
+}
+.custom-checkbox:checked {
+background-color: #4CAF50;
+border-color: #4CAF50;
+}
+.custom-checkbox:checked::after {
+content: '';
+position: absolute;
+width: 5px;
+height: 10px;
+border: solid white;
+border-width: 0 2px 2px 0;
+top: 3px;
+left: 7px;
+transform: rotate(45deg);
+}
+</style>
+</head>
+<body class="bg-gray-50">
+<!-- Header -->
+<header class="bg-white shadow-sm sticky top-0 z-50">
+<div class="container mx-auto px-4 py-3 flex items-center justify-between">
+<a href="#" class="font-['Pacifico'] text-3xl text-primary">EcoLife</a>
+<nav class="hidden md:flex space-x-8">
+<a href="ecolife.html" class="text-gray-700 hover:text-primary font-medium">Início</a>
+<a href="receitas.html" class="text-gray-700 hover:text-primary font-medium">Receitas</a>
+<a href="caculadora.html" class="text-gray-700 hover:text-primary font-medium">Calculadora de IMC</a>
+<a href="#" class="text-gray-700 hover:text-primary font-medium">Plantio</a>
+<a href="#" class="text-gray-700 hover:text-primary font-medium">Infantil</a>
+<a href="blog.html" class="text-gray-700 hover:text-primary font-medium">Blog</a>
+<a href="perfil.html" class="text-gray-700 hover:text-primary font-medium">Perfil</a>
+</nav>
+<div class="flex items-center space-x-4">
+<a href="login.html"><button class="bg-primary text-white px-5 py-2 !rounded-button whitespace-nowrap hover:bg-opacity-90 transition-colors"  >Entrar</button></a>
+<div class="w-10 h-10 flex items-center justify-center md:hidden">
+<i class="ri-menu-line ri-lg"></i>
+</div>
+</div>
+</div>
+</header>
+<!-- Hero Section -->
+<section class="hero-section py-20">
+<div class="container mx-auto px-4 w-full">
+<div class="max-w-2xl">
+<h1 class="text-4xl md:text-5xl font-bold mb-4 text-gray-800">Vida saudável ao seu alcance</h1>
+<p class="text-lg text-gray-700 mb-8">Descubra receitas, dicas e recursos para uma vida mais saudável, independente das suas restrições alimentares ou condições físicas.</p>
+<div class="flex flex-col sm:flex-row gap-4 mb-8">
+<button class="bg-primary text-white px-6 py-3 !rounded-button whitespace-nowrap hover:bg-opacity-90 transition-colors font-medium">Começar Agora</button>
+<button class="bg-white text-primary border border-primary px-6 py-3 !rounded-button whitespace-nowrap hover:bg-gray-50 transition-colors font-medium">Saiba Mais</button>
+</div>
+<div class="relative max-w-xl">
+<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+<div class="w-5 h-5 flex items-center justify-center text-gray-400">
+<i class="ri-search-line"></i>
+</div>
+</div>
+<input type="text" placeholder="Buscar receitas, dicas ou artigos..." class="w-full pl-10 pr-4 py-3 border-none !rounded-button bg-white shadow-md focus:ring-2 focus:ring-primary focus:outline-none text-sm">
+</div>
+</div>
+</div>
+</section>
+<!-- Categories Section -->
+<section class="py-16 bg-white">
+<div class="container mx-auto px-4">
+<h2 class="text-3xl font-bold text-center mb-12">Para Quem é o EcoLife?</h2>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+<div class="category-card bg-white rounded shadow-sm hover:shadow-md transition-all p-6 text-center flex flex-col items-center custom-shadow">
+<div class="w-16 h-16 flex items-center justify-center bg-green-50 rounded-full mb-4">
+<i class="ri-baby-line ri-xl text-primary"></i>
+</div>
+<h3 class="font-semibold text-lg mb-2">Bebês</h3>
+<p class="text-gray-600 text-sm">Alimentação saudável desde o início da vida</p>
+</div>
+<div class="category-card bg-white rounded shadow-sm hover:shadow-md transition-all p-6 text-center flex flex-col items-center custom-shadow">
+<div class="w-16 h-16 flex items-center justify-center bg-green-50 rounded-full mb-4">
+<i class="ri-women-line ri-xl text-primary"></i>
+</div>
+<h3 class="font-semibold text-lg mb-2">Mães</h3>
+<p class="text-gray-600 text-sm">Nutrição para gestantes e lactantes</p>
+</div>
+<div class="category-card bg-white rounded shadow-sm hover:shadow-md transition-all p-6 text-center flex flex-col items-center custom-shadow">
+<div class="w-16 h-16 flex items-center justify-center bg-green-50 rounded-full mb-4">
+<i class="ri-user-smile-line ri-xl text-primary"></i>
+</div>
+<h3 class="font-semibold text-lg mb-2">Jovens</h3>
+<p class="text-gray-600 text-sm">Energia e vitalidade para o dia a dia</p>
+</div>
+<div class="category-card bg-white rounded shadow-sm hover:shadow-md transition-all p-6 text-center flex flex-col items-center custom-shadow">
+<div class="w-16 h-16 flex items-center justify-center bg-green-50 rounded-full mb-4">
+<i class="ri-user-line ri-xl text-primary"></i>
+</div>
+<h3 class="font-semibold text-lg mb-2">Adultos</h3>
+<p class="text-gray-600 text-sm">Equilíbrio para uma vida produtiva</p>
+</div>
+<div class="category-card bg-white rounded shadow-sm hover:shadow-md transition-all p-6 text-center flex flex-col items-center custom-shadow">
+<div class="w-16 h-16 flex items-center justify-center bg-green-50 rounded-full mb-4">
+<i class="ri-user-heart-line ri-xl text-primary"></i>
+</div>
+<h3 class="font-semibold text-lg mb-2">Idosos</h3>
+<p class="text-gray-600 text-sm">Saúde e longevidade com qualidade</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Features Section -->
+<section class="py-16 bg-gray-50">
+<div class="container mx-auto px-4">
+<h2 class="text-3xl font-bold text-center mb-12">O Que Oferecemos</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<div class="bg-white p-6 rounded custom-shadow">
+<div class="w-12 h-12 flex items-center justify-center bg-green-100 rounded-full mb-4">
+<i class="ri-restaurant-line ri-lg text-primary"></i>
+</div>
+<h3 class="font-semibold text-xl mb-3">Receitas Saudáveis</h3>
+<p class="text-gray-600 mb-4">Centenas de receitas adaptadas para diferentes restrições alimentares e objetivos de saúde.</p>
+<a href="#" class="text-primary font-medium flex items-center">
+Ver receitas
+<div class="w-5 h-5 flex items-center justify-center ml-1">
+<i class="ri-arrow-right-line"></i>
+</div>
+</a>
+</div>
+<div class="bg-white p-6 rounded custom-shadow">
+<div class="w-12 h-12 flex items-center justify-center bg-green-100 rounded-full mb-4">
+<i class="ri-calculator-line ri-lg text-primary"></i>
+</div>
+<h3 class="font-semibold text-xl mb-3">Calculadoras de Saúde</h3>
+<p class="text-gray-600 mb-4">Ferramentas para calcular IMC, necessidades calóricas e acompanhar seu progresso.</p>
+<a href="#" class="text-primary font-medium flex items-center">
+Calcular agora
+<div class="w-5 h-5 flex items-center justify-center ml-1">
+<i class="ri-arrow-right-line"></i>
+</div>
+</a>
+</div>
+<div class="bg-white p-6 rounded custom-shadow">
+<div class="w-12 h-12 flex items-center justify-center bg-green-100 rounded-full mb-4">
+<i class="ri-plant-line ri-lg text-primary"></i>
+</div>
+<h3 class="font-semibold text-xl mb-3">Plantio Sustentável</h3>
+<p class="text-gray-600 mb-4">Guias para cultivar seus próprios alimentos de forma orgânica e econômica.</p>
+<a href="#" class="text-primary font-medium flex items-center">
+Aprender a plantar
+<div class="w-5 h-5 flex items-center justify-center ml-1">
+<i class="ri-arrow-right-line"></i>
+</div>
+</a>
+</div>
+<div class="bg-white p-6 rounded custom-shadow">
+<div class="w-12 h-12 flex items-center justify-center bg-green-100 rounded-full mb-4">
+<i class="ri-group-line ri-lg text-primary"></i>
+</div>
+<h3 class="font-semibold text-xl mb-3">Perfil</h3>
+<p class="text-gray-600 mb-4">Conecte-se com pessoas que compartilham dos mesmos objetivos e desafios de saúde.</p>
+<a href="#" class="text-primary font-medium flex items-center">
+Participar
+<div class="w-5 h-5 flex items-center justify-center ml-1">
+<i class="ri-arrow-right-line"></i>
+</div>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Featured Recipes Section -->
+<section class="py-16 bg-white">
+<div class="container mx-auto px-4">
+<div class="flex flex-col md:flex-row justify-between items-center mb-10">
+<h2 class="text-3xl font-bold">Receitas em Destaque</h2>
+<div class="flex mt-4 md:mt-0 space-x-2 bg-gray-100 p-1 !rounded-full">
+<button class="px-4 py-2 !rounded-full bg-primary text-white whitespace-nowrap">Todas</button>
+<button class="px-4 py-2 !rounded-full text-gray-700 hover:bg-gray-200 whitespace-nowrap">Sem Glúten</button>
+<button class="px-4 py-2 !rounded-full text-gray-700 hover:bg-gray-200 whitespace-nowrap">Sem Lactose</button>
+<button class="px-4 py-2 !rounded-full text-gray-700 hover:bg-gray-200 whitespace-nowrap">Low Carb</button>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="bg-white rounded overflow-hidden custom-shadow">
+<div class="h-48 overflow-hidden">
+<img src="https://public.readdy.ai/ai/img_res/227c04066689083b75eb0ecd251c2496.jpg" alt="Salada de Quinoa" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-5">
+<div class="flex mb-3">
+<span class="bg-green-100 text-primary text-xs px-2 py-1 rounded-full mr-2">Sem Glúten</span>
+<span class="bg-green-100 text-primary text-xs px-2 py-1 rounded-full">Vegano</span>
+</div>
+<h3 class="font-semibold text-xl mb-2">Salada de Quinoa com Abacate</h3>
+<p class="text-gray-600 text-sm mb-3">Uma refeição completa rica em proteínas e gorduras saudáveis, perfeita para o almoço.</p>
+<div class="flex justify-between items-center">
+<div class="flex items-center">
+<div class="w-5 h-5 flex items-center justify-center text-gray-500 mr-1">
+<i class="ri-time-line"></i>
+</div>
+<span class="text-gray-500 text-sm">25 min</span>
+</div>
+<button class="text-primary hover:text-primary-dark font-medium whitespace-nowrap">Ver Receita</button>
+</div>
+</div>
+</div>
+<div class="bg-white rounded overflow-hidden custom-shadow">
+<div class="h-48 overflow-hidden">
+<img src="https://public.readdy.ai/ai/img_res/99952f980b8fe6517da2314852aa94e6.jpg" alt="Smoothie Bowl" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-5">
+<div class="flex mb-3">
+<span class="bg-green-100 text-primary text-xs px-2 py-1 rounded-full mr-2">Sem Lactose</span>
+<span class="bg-green-100 text-primary text-xs px-2 py-1 rounded-full">Rico em Fibras</span>
+</div>
+<h3 class="font-semibold text-xl mb-2">Smoothie Bowl de Açaí</h3>
+<p class="text-gray-600 text-sm mb-3">Um café da manhã refrescante e nutritivo, cheio de antioxidantes e energia para o dia.</p>
+<div class="flex justify-between items-center">
+<div class="flex items-center">
+<div class="w-5 h-5 flex items-center justify-center text-gray-500 mr-1">
+<i class="ri-time-line"></i>
+</div>
+<span class="text-gray-500 text-sm">10 min</span>
+</div>
+<button class="text-primary hover:text-primary-dark font-medium whitespace-nowrap">Ver Receita</button>
+</div>
+</div>
+</div>
+<div class="bg-white rounded overflow-hidden custom-shadow">
+<div class="h-48 overflow-hidden">
+<img src="https://public.readdy.ai/ai/img_res/704c8af5c4dc12b4c810eff0d6878cc5.jpg" alt="Frango Grelhado" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-5">
+<div class="flex mb-3">
+<span class="bg-green-100 text-primary text-xs px-2 py-1 rounded-full mr-2">Sem Glúten</span>
+<span class="bg-green-100 text-primary text-xs px-2 py-1 rounded-full">Rico em Proteínas</span>
+</div>
+<h3 class="font-semibold text-xl mb-2">Frango Grelhado com Legumes</h3>
+<p class="text-gray-600 text-sm mb-3">Uma opção balanceada de proteínas e vegetais para um jantar leve e nutritivo.</p>
+<div class="flex justify-between items-center">
+<div class="flex items-center">
+<div class="w-5 h-5 flex items-center justify-center text-gray-500 mr-1">
+<i class="ri-time-line"></i>
+</div>
+<span class="text-gray-500 text-sm">35 min</span>
+</div>
+<button class="text-primary hover:text-primary-dark font-medium whitespace-nowrap">Ver Receita</button>
+</div>
+</div>
+</div>
+</div>
+<div class="text-center mt-10">
+<button class="bg-white border border-primary text-primary px-6 py-3 !rounded-button whitespace-nowrap hover:bg-gray-50 transition-colors font-medium">Ver Mais Receitas</button>
+</div>
+</div>
+</section>
+<!-- Blog Section -->
+<section class="py-16 bg-white">
+<div class="container mx-auto px-4">
+<h2 class="text-3xl font-bold text-center mb-12">Artigos Recentes</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="bg-white rounded overflow-hidden custom-shadow">
+<div class="h-48 overflow-hidden">
+<img src="https://public.readdy.ai/ai/img_res/d059476576fcc9708301b29dc8d1daba.jpg" alt="Plantio Orgânico" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-5">
+<div class="flex items-center mb-3">
+<div class="w-5 h-5 flex items-center justify-center text-gray-500 mr-1">
+<i class="ri-calendar-line"></i>
+</div>
+<span class="text-gray-500 text-sm">07 Abril, 2025</span>
+</div>
+<h3 class="font-semibold text-xl mb-2">Guia Completo para Iniciar sua Horta Orgânica</h3>
+<p class="text-gray-600 text-sm mb-4">Aprenda como cultivar seus próprios alimentos sem agrotóxicos, mesmo em espaços pequenos.</p>
+<a href="#" class="text-primary font-medium flex items-center">
+Ler mais
+<div class="w-5 h-5 flex items-center justify-center ml-1">
+<i class="ri-arrow-right-line"></i>
+</div>
+</a>
+</div>
+</div>
+<div class="bg-white rounded overflow-hidden custom-shadow">
+<div class="h-48 overflow-hidden">
+<img src="https://public.readdy.ai/ai/img_res/d88dea6e3c3868ff1221a31e75e99164.jpg" alt="Intolerância ao Glúten" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-5">
+<div class="flex items-center mb-3">
+<div class="w-5 h-5 flex items-center justify-center text-gray-500 mr-1">
+<i class="ri-calendar-line"></i>
+</div>
+<span class="text-gray-500 text-sm">05 Abril, 2025</span>
+</div>
+<h3 class="font-semibold text-xl mb-2">Como Identificar Produtos Sem Glúten no Supermercado</h3>
+<p class="text-gray-600 text-sm mb-4">Dicas práticas para facilitar suas compras quando você tem intolerância ao glúten.</p>
+<a href="#" class="text-primary font-medium flex items-center">
+Ler mais
+<div class="w-5 h-5 flex items-center justify-center ml-1">
+<i class="ri-arrow-right-line"></i>
+</div>
+</a>
+</div>
+</div>
+<div class="bg-white rounded overflow-hidden custom-shadow">
+<div class="h-48 overflow-hidden">
+<img src="https://public.readdy.ai/ai/img_res/9582b17e185040a3c514f65981307594.jpg" alt="Exercícios para Idosos" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-5">
+<div class="flex items-center mb-3">
+<div class="w-5 h-5 flex items-center justify-center text-gray-500 mr-1">
+<i class="ri-calendar-line"></i>
+</div>
+<span class="text-gray-500 text-sm">02 Abril, 2025</span>
+</div>
+<h3 class="font-semibold text-xl mb-2">Exercícios Adaptados para Pessoas com Artrite</h3>
+<p class="text-gray-600 text-sm mb-4">Atividades físicas seguras e eficazes para quem sofre com dores nas articulações.</p>
+<a href="#" class="text-primary font-medium flex items-center">
+Ler mais
+<div class="w-5 h-5 flex items-center justify-center ml-1">
+<i class="ri-arrow-right-line"></i>
+</div>
+</a>
+</div>
+</div>
+</div>
+<div class="text-center mt-10">
+<button class="bg-white border border-primary text-primary px-6 py-3 !rounded-button whitespace-nowrap hover:bg-gray-50 transition-colors font-medium">Ver Todos os Artigos</button>
+</div>
+</div>
+</section>
+<!-- Testimonials Section -->
+<section class="py-16 bg-gray-50">
+<div class="container mx-auto px-4">
+<h2 class="text-3xl font-bold text-center mb-12">O Que Dizem Nossos Usuários</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="bg-white p-6 rounded custom-shadow">
+<div class="flex items-center mb-4">
+<div class="text-yellow-400 flex">
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+</div>
+</div>
+<p class="text-gray-600 mb-6">"Depois que descobri minha intolerância à lactose, achei que teria que abrir mão de muitos pratos que amo. Graças às receitas do EcoLife, descobri alternativas deliciosas e continuo comendo bem!"</p>
+<div class="flex items-center">
+<div class="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center mr-3">
+<i class="ri-user-line ri-lg text-gray-500"></i>
+</div>
+<div>
+<h4 class="font-medium">Mariana Oliveira</h4>
+<p class="text-gray-500 text-sm">Rio de Janeiro</p>
+</div>
+</div>
+</div>
+<div class="bg-white p-6 rounded custom-shadow">
+<div class="flex items-center mb-4">
+<div class="text-yellow-400 flex">
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+</div>
+</div>
+<p class="text-gray-600 mb-6">"Comecei a usar o EcoLife para ajudar no controle da minha obesidade. As calculadoras e o acompanhamento personalizado fizeram toda a diferença. Já perdi 15kg de forma saudável!"</p>
+<div class="flex items-center">
+<div class="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center mr-3">
+<i class="ri-user-line ri-lg text-gray-500"></i>
+</div>
+<div>
+<h4 class="font-medium">Ricardo Mendes</h4>
+<p class="text-gray-500 text-sm">São Paulo</p>
+</div>
+</div>
+</div>
+<div class="bg-white p-6 rounded custom-shadow">
+<div class="flex items-center mb-4">
+<div class="text-yellow-400 flex">
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+</div>
+</div>
+<p class="text-gray-600 mb-6">"Tenho artrite e as dicas de exercícios adaptados do EcoLife me ajudaram a voltar a me movimentar sem dor. Os artigos sobre alimentação anti-inflamatória também fizeram muita diferença na minha qualidade de vida."</p>
+<div class="flex items-center">
+<div class="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center mr-3">
+<i class="ri-user-line ri-lg text-gray-500"></i>
+</div>
+<div>
+<h4 class="font-medium">Cláudia Ferreira</h4>
+<p class="text-gray-500 text-sm">Belo Horizonte</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Newsletter Section -->
+<section class="py-16 bg-primary bg-opacity-10">
+<div class="container mx-auto px-4">
+<div class="max-w-3xl mx-auto text-center">
+<h2 class="text-3xl font-bold mb-4">Fique por dentro das novidades</h2>
+<p class="text-gray-600 mb-8">Receba receitas, dicas de saúde e conteúdo exclusivo diretamente no seu e-mail.</p>
+<div class="flex flex-col sm:flex-row gap-3">
+<input type="email" placeholder="Seu melhor e-mail" class="flex-1 px-4 py-3 border-none !rounded-button focus:ring-2 focus:ring-primary focus:outline-none">
+<button class="bg-primary text-white px-6 py-3 !rounded-button whitespace-nowrap hover:bg-opacity-90 transition-colors font-medium">Inscrever-se</button>
+</div>
+<p class="text-gray-500 text-sm mt-4">Ao se inscrever, você concorda com nossa política de privacidade. Não enviamos spam.</p>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-gray-800 text-white pt-16 pb-8">
+<div class="container mx-auto px-4">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+<div>
+<a href="#" class="font-['Pacifico'] text-3xl text-white mb-4 inline-block">EcoLife</a>
+<p class="text-gray-400 mb-6">Promovendo saúde e bem-estar através de uma alimentação consciente e sustentável.</p>
+<div class="flex space-x-4">
+<a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-700 rounded-full hover:bg-primary transition-colors">
+<i class="ri-facebook-fill"></i>
+</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-700 rounded-full hover:bg-primary transition-colors">
+<i class="ri-instagram-line"></i>
+</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-700 rounded-full hover:bg-primary transition-colors">
+<i class="ri-youtube-line"></i>
+</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-700 rounded-full hover:bg-primary transition-colors">
+<i class="ri-pinterest-line"></i>
+</a>
+</div>
+</div>
+<div>
+<h3 class="text-lg font-semibold mb-4">Links Rápidos</h3>
+<ul class="space-y-3">
+<li><a href="#" class="text-gray-400 hover:text-white transition-colors">Início</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition-colors">Receitas</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition-colors">Calculadoras</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition-colors">Blog</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition-colors">Perfil</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition-colors">Sobre Nós</a></li>
+</ul>
+</div>
+<div>
+<h3 class="text-lg font-semibold mb-4">Categorias</h3>
+<ul class="space-y-3">
+<li><a href="#" class="text-gray-400 hover:text-white transition-colors">Sem Glúten</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition-colors">Sem Lactose</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition-colors">Baixo Carboidrato</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition-colors">Vegetariano</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition-colors">Vegano</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition-colors">Fitness</a></li>
+</ul>
+</div>
+<div>
+<h3 class="text-lg font-semibold mb-4">Contato</h3>
+<ul class="space-y-3">
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-gray-400 mr-2 mt-1">
+<i class="ri-map-pin-line"></i>
+</div>
+<span class="text-gray-400">Av. Paulista, 1000 - São Paulo, SP</span>
+</li>
+<li class="flex items-center">
+<div class="w-5 h-5 flex items-center justify-center text-gray-400 mr-2">
+<i class="ri-phone-line"></i>
+</div>
+<span class="text-gray-400">(11) 3456-7890</span>
+</li>
+<li class="flex items-center">
+<div class="w-5 h-5 flex items-center justify-center text-gray-400 mr-2">
+<i class="ri-mail-line"></i>
+</div>
+<span class="text-gray-400">contato@ecolife.com.br</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="border-t border-gray-700 pt-8">
+<div class="flex flex-col md:flex-row justify-between items-center">
+<p class="text-gray-400 text-sm mb-4 md:mb-0">© 2025 EcoLife. Todos os direitos reservados.</p>
+<div class="flex space-x-6">
+<a href="termos.html" class="text-gray-400 hover:text-white text-sm">Termos de Uso</a>
+<a href="#" class="text-gray-400 hover:text-white text-sm">Política de Privacidade</a>
+<a href="#" class="text-gray-400 hover:text-white text-sm">Cookies</a>
+</div>
+</div>
+</div>
+</div>
+</footer>
+</body>
+</html>

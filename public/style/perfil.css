@@ -1,0 +1,39 @@
+  .progress-ring__circle {
+            transition: stroke-dashoffset 0.5s;
+            transform: rotate(-90deg);
+            transform-origin: 50% 50%;
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #4ade80;
+            border-radius: 10px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+            background: #22c55e;
+        }
+
+.gradient-bg {
+background: linear-gradient(135deg, #84fab0 0%, #8fd3f4 100%);
+}
+.result-box {
+transition: all 0.3s ease;
+transform: scale(0);
+opacity: 0;
+}
+.result-box.show {
+transform: scale(1);
+opacity: 1;
+}
+.food-icon {
+animation: float 3s ease-in-out infinite;
+}
+@keyframes float {
+0%, 100% { transform: translateY(0); }
+50% { transform: translateY(-10px); }
+}
