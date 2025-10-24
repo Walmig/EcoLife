@@ -20,6 +20,8 @@ Checklist
 - [ ] Login de Usuario
 - [ ] Plantio adaptado ao estado que reside.
 - [ ] Momento adequado para a colheita do plantio
+- [ ] Receitas Infantis
+- [ ] 
 
 
 
