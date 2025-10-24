@@ -17,7 +17,7 @@ Checklist
 - [ ] Alimentação infantil.
 - [ ] Perfil personalizado.
 - [ ] Calculadora de calorias.
-- [ ] Treinos Personalizados.
+- [ ] Login de Usuario
 - [ ] Plantio adaptado ao estado que reside.
 - [ ] Momento adequado para a colheita do plantio
 
