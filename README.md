@@ -1,4 +1,4 @@
-# EcoLife
+feedbacks# EcoLife
 Integrantes:
 - Walmig Miranda de Oliveira Fonseca Filho - 12303399
 - Leon Pierro Vieira Carvalho - 12302996
@@ -21,8 +21,15 @@ Checklist
 - [ ] Plantio adaptado ao estado que reside.
 - [ ] Momento adequado para a colheita do plantio
 - [ ] Receitas Infantis
-- [ ] 
-
+- [ ] Gerenciamento de Perfil do Usuário
+- [ ] Medidor de Força de Senha
+- [ ] Exibição de Receitas em Destaque
+- [ ] Navegação Principal
+- [ ] Design Responsivo
+- [ ] Cadastro de Usuário com Objetivo Alimentar
+- [ ] Dicas Nutricionais Personalizadas
+- [ ] Seção de Blog/Artigos Recentes
+- [ ] Filtragem de Receitas por Dieta
 
 
 Modo de executar o site: 
