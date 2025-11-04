@@ -20,3 +20,12 @@ Checklist
 - [ ] Treinos Personalizados.
 - [ ] Plantio adaptado ao estado que reside.
 - [ ] Momento adequado para a colheita do plantio
+- [ ] Receitas Infantis
+- [ ] Gerenciamento de Perfil do Usuário
+- [ ] Medidor de Força de Senha
+- [ ] Exibição de Receitas em Destaque
+- [ ] Navegação Principal
+- [ ] Design Responsivo
+- [ ] Cadastro de Usuário com Objetivo Alimentar
+- [ ] Seção de Blog/Artigos Recentes
+- [ ] Filtragem de Receitas por Dieta
